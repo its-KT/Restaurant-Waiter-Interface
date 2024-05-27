@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Waiter</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Restaurant Waiter Interface</h1>
+    
+    <div id="orderForm">
+        <label for="dishName">Dish Name:</label>
+        <input type="text" id="dishName">
+        <label for="price">Price:</label>
+        <input type="number" id="price" step="0.01">
+        <label for="tableNumber">Table Number:</label>
+        <input type="number" id="tableNumber" min="1">
+        <button onclick="addToList()">Add to List</button>
+    </div>
+
+    <div id="orderList">
+        <h2>Order List</h2>
+        <ul id="orders"></ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
