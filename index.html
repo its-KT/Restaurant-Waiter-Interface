@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Waiter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        #orderForm {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #orderForm label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        #orderForm input, #orderForm select, #orderForm button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #orderForm button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #orderForm button:hover {
+            background-color: #218838;
+        }
+        #orderList {
+            margin: 20px;
+        }
+        #orderList h1 {
+            color: #333;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul h2 {
+            color: #555;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        ul li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ul li button {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        ul li button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1><marquee>Online Restaurant Waiters Interface Page </marquee></h1>
+    <div id="orderForm">
+        <label for="price">Choose Price:</label>
+        <input type="number" id="price" step="0.01">
+        <label for="dishName">Choose Dish:</label>
+        <input type="text" id="dishName">
+
+        <label for="tableNumber">Choose a Table:</label>
+        <select id="tableNumber">
+            <option value="1">Table 1</option>
+            <option value="2">Table 2</option>
+            <option value="3">Table 3</option>
+        </select>
+        <button onclick="addToList()">Add to List</button>
+    </div>
+
+    <div id="orderList">
+        <h1>Orders</h1>
+        <ul id="table1">
+            <h2>Table 1</h2>
+        </ul>
+        <ul id="table2">
+            <h2>Table 2</h2>
+        </ul>
+        <ul id="table3">
+            <h2>Table 3</h2>
+        </ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
